@@ -1,0 +1,87 @@
+import os,sys,zipfile
+
+#identify location
+xdh = input.value
+os.chdir(xhd)
+os.chroot(xhd)
+
+#identify lists
+todo = [xhd -r]
+exc = []
+checked = []
+max_size = xyz
+current_size = xyz
+
+
+
+def var1
+#create a semi-unique file naming system
+for paths, folders, items in os.walk(xhd):
+    for i in items:
+    os.path.abspath(os.path.join(path, i))
+        todo.append(item)
+    for f in folders:
+    os.path.abspath(os.path.join(path, f))
+        todo.append(folder)
+        
+#exclude files that are already zipped
+for paths, folders, items in os.walk(drive):
+    for i in items:
+        if i.endswith('.zip'|'.gz'|'.7z'|'.rar'|etc)
+        #alternative method: if os.path.splitext(i)[1] ('.zip'|'.gz'|'.7z'|'.rar'|etc)
+            exc.append(i) & todo.remove(i)
+
+#mark all empty directories as checked
+for paths, folders, items in os.walk(drive(os.getcwd()):            
+    for p in paths:
+        if len(items) + len(folders) = 0:
+            checked.append(p) & todo.remove(p)
+    
+    
+def var2
+for paths, folders, items in os.walk(xhd):
+    for p in paths:
+        for i in items:
+        total_size += os.path.getsize(i)
+            if os.path.getsize(i) > 10737418240: #10gb
+                remove.todo(i)
+                fName = i.name
+                zip fName.zip & exc.append #heavy                         
+            elif os.path.getsize(i) > 2147483648: #2gb
+                remove.todo(i)
+                f2Name = i.name
+                zip f2Name.zip & exc.append #quick
+            elif total_size >= 5368709120: #5gb
+                remove.todo(i)
+                total_num = len(i)
+                zip (p)(total_num).zip & exc.append
+                exc.append(p)
+            else:
+                checked.append(i) & todo.remove(p) & launch var1
+
+           #newName = os.path.join(p, i)
+                
+                                     
+def var3
+for paths, folders, items in os.walk(xhd):
+    for p in paths
+        for f in folders
+            if f is not exc & i is not exc
+                total_size += os.path.getsize(p)
+                    if total_size >= 5368709120: #5gb
+                        remove.todo(f)
+                        total_num = len(f)
+                        zip (p)(total_num).zip & exc.append
+                        exc.append(p)
+                    else:
+                        checked.append(f) & todo.remove(f) & launch var1
+    
+                    
+new_size = xyz
+saved_size = int(current_size-new_size)
+
+if len(todo)==0
+    print("Finished! The following has been zipped: " +[exc]
+          \n
+          "You have saved a total of " + saved_size +" bytes")
+
